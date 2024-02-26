@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/src/styles/style.css">
+    <script src="https://kit.fontawesome.com/463c000ede.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <img class="logo" src="/src/images/logo.png" alt="Logo">
+                <ul id="sidemenu" class="nav__list">
+                    <li><a class="nav__link" href="#header">Home</a></li>
+                    <li><a class="nav__link" href="#about">Sobre</a></li>
+                    <li><a class="nav__link" href="#services">Serviços</a></li>
+                    <li><a class="nav__link" href="#portfolio">Portfolio</a></li>
+                    <li><a class="nav__link" href="#contact">Contato</a></li>
+                    <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header__text">
+                <div class="text-revels">
+                    <div class="text">
+                        <p class="header__subtitle">Desenvolvedor Front-End</p>
+                    </div>
+                </div>
+                <h1 class="header__title">Olá, Sou<br><span class="header__name">Tomás</span> Santana</h1>
+                <p class="header__description">Seja bem-vindo ao meu universo digital <br> onde a criatividade
+                    encontra a tecnologia.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about__col-1">
+                    <img src="/src/images/foto-perfil.png" alt="Minha Foto de Perfil">
+                </div>
+                <div class="about__col-2">
+                    <h2 id="contact-mobile" class="sub__title">Sobre Mim</h2>
+                    <p>
+                        Estudante de Engenharia Front-End na EBAC, também graduando em Sistemas de Informação pela
+                        Faculdade Descomplica. Possuo habilidades em HTML, CSS, SASS, JavaScript e Git. Minha
+                        adaptabilidade e paixão pelo desenvolvimento web me capacitam a abordar desafios de codificação
+                        de maneira eficaz. Estou em busca de oportunidades para aplicar meu conhecimento e crescer na
+                        área, contribuindo para projetos desafiadores que impulsionem minha evolução como Engenheiro
+                        Front-End.
+                    </p>
+
+                    <div class="tab__titles">
+                        <p class="tab__links active-link" onclick="opentab('skills')">Habilidades</p>
+                        <p class="tab__links" onclick="opentab('education')">Formações</p>
+                        <p class="tab__links" onclick="opentab('certification')">Certificados</p>
+                    </div>
+                    <div class="tab__contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Desenvolvimento Front-End</span><br>Utilizo as seguintes ferramentas: 
+                                <br>
+                                <div class="tooltip">
+                                    <i class="fa-brands fa-html5"></i>
+                                    <div class="tooltip-text">Linguagem de marcação para estruturação de conteúdo na web.</div>
+                                </div>
+                                <div class="tooltip">
+                                    <i class="fa-brands fa-css3-alt"></i>
+                                    <div class="tooltip-text">Linguagem de estilo para definir a apresentação de documentos HTML.</div>
+                                </div>
+                                <div class="tooltip">
+                                    <i class="fa-brands fa-sass"></i>
+                                    <div class="tooltip-text">Linguagem de estilo para definir a apresentação de documentos HTML.</div>
+                                </div>
+                                <div class="tooltip">
+                                    <i class="fa-brands fa-less"></i>
+                                    <div class="tooltip-text">Pré-processador CSS que simplifica a escrita de estilos.</div>
+                                </div>
+                                <div class="tooltip">
+                                    <i class="fa-brands fa-js"></i>
+                                    <div class="tooltip-text">Linguagem de programação para tornar as páginas web interativas.</div>
+                                </div>
+                                <div class="tooltip">
+                                    <i class="fa-brands fa-bootstrap"></i>
+                                    <div class="tooltip-text">Framework CSS que facilita o desenvolvimento de páginas responsivas.</div>
+                                </div>
+                                <div class="tooltip">
+                                    <i class="fa-brands fa-gulp"></i>
+                                    <div class="tooltip-text">Ferramenta de automação de tarefas no desenvolvimento web.</div>
+                                </div>
+                                <div class="tooltip">
+                                    <i class="fa-brands fa-git-alt"></i>
+                                    <div class="tooltip-text">Sistema de controle de versão para rastrear alterações no código fonte</div>
+                                </div>
+                                <div class="tooltip">
+                                    <i class="fa-brands fa-figma"></i>
+                                    <div class="tooltip-text">Plataforma de design colaborativo para criar interfaces de usuário</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab__contents " id="education">
+                        <ul>
+                            <li><span>2023 - Atual</span><br>Engenheiro Front-End - EBAC<br>Atualmente matriculado na
+                                Escola Britânica de Artes Criativas e Tecnologia. Busco oportunidades para aplicar meu
+                                conhecimento em desenvolvimento web e meu desejo de aprender e crescer na área.</li>
+                            <li><span>2022 - Atual</span><br>Sistemas de Informação - Faculdade Descomplica<br>Graduando
+                                no 4º período de Sistemas de Informação, já abordei tópicos fundamentais como Database
+                                Development, Programming Basics, Oriented Object Developer e Arquitetura e Organização
+                                de Computadores durante minha formação. Essa experiência enriquece meu conhecimento não
+                                apenas na área web, mas também me capacita a enfrentar desafios em diversas disciplinas
+                                da computação.</li>
+                        </ul>
+                    </div>
+                    <div class="tab__contents" id="certification">
+                        <ul>
+                            <li><a
+                                    href="https://certificados.descomplica.com.br/graduacao/105e25b255e38c5540d577b793b8cb6b95cc9447024a70f03d16720c88f33cde"><span>Certificado
+                                        em Programming Basics</span></a><br>Especialista pelo curso de Sistemas de
+                                Informação da Faculdade Descomplica</li>
+                            <li><a
+                                    href="https://certificados.descomplica.com.br/graduacao/e875694ffa1da6053221906ec1e5a178fabcb606257ae5d485250dbb5aa77903"><span>Certificado
+                                        em Object-Oriented Developer</span></a><br>Especialista pelo curso de Sistemas
+                                de Informação da Faculdade Descomplica</li>
+                            <li><a
+                                    href="https://certificados.descomplica.com.br/graduacao/df72cf6469fb2e07012fba0f8161e11de01ecb57f79584a7101ac40f47e6c117"><span>Certificado
+                                        em DB-Developer</span></a><br>Especialista pelo curso de Sistemas de Informação
+                                da Faculdade Descomplica</li>
+                            <li><a
+                                    href="https://certificados.descomplica.com.br/graduacao/0f0d8b53bfa192f9c653ddd5107aa7d0a9918c5d733c83f97652b516d70dea56"><span>Certificado
+                                        em Arquitetura e Organização de Computadores</span></a><br>Especialista pelo
+                                curso de Sistemas de Informação da Faculdade Descomplica</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="sub__title">Meus Serviços</h2>
+            <div class="services__list">
+                <div class="service">
+                    <i class="fa-solid fa-code" style="color: #00BB84;"></i>
+                    <h3>Desenvolvimento Front-End</h3>
+                    <p>Seja para criar experiências de usuário envolventes, interfaces intuitivas ou websites
+                        responsivos, ofereço serviços de desenvolvimento front-end. Como minhas habilidades
+                        em HTML, CSS, JavaScript, e outras tecnologias modernas, estou comprometido em transformar
+                        conceitos criativos em realidade digital. Com uma abordagem centrada no usuário e atenção aos
+                        detalhes, desenvolvo soluções web que não apenas impressionam visualmente, mas também oferecem
+                        desempenho excepcional. Conte comigo para elevar a presença online do seu projeto com
+                        codificação front-end excepcional e funcionalidades inovadoras.</p>
+                    <a href="#about">Saiba mais</a>
+                </div>
+                <div class="service">
+                    <i class="fa-brands fa-app-store" style="color: #00BB84;"></i>
+                    <h3>Desenvolvimento de App</h3>
+                    <p>Explore o conceito de aplicativo com os meus serviços de
+                        desenvolvimento. Como desenvolvedor front-end, estou apto a criar interfaces
+                        dinâmicas, funcionais e visualmente atraentes para os seus aplicativos. Desde o design até a
+                        implementação, cada fase do processo é
+                        tratada com precisão e dedicação.</p>
+                    <a href="#about">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="sub__title">Meus Projetos</h2>
+            <div class="work__list">
+                <div class="work">
+                    <img src="/src/images/disney+.png" alt="Projeto 1">
+                    <div class="layer">
+                        <h3>Webpage</h3>
+                        <p>Clone do site da Disney+</p>
+                        <a target="_blank" href="https://clone-disneyplus-54m07.vercel.app/"><i
+                                class="fa-solid fa-arrow-up-right-from-square" style="color: #00bb84;"></i> </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/src/images/descubra-destinos.png" alt="Projeto 2">
+                    <div class="layer">
+                        <h3>Webpage</h3>
+                        <p>Site Descubra Destinos</p>
+                        <a target="_blank" href="https://landingpage-bootstrap-theta.vercel.app/"><i
+                                class="fa-solid fa-arrow-up-right-from-square" style="color: #00bb84;"></i> </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/src/images/web-site.png" alt="Projeto 3">
+                    <div class="layer">
+                        <h3>Webpage</h3>
+                        <p>Web site</p>
+                        <a target="_blank" href="https://projeto-bootstrap-drab.vercel.app/"><i
+                                class="fa-solid fa-arrow-up-right-from-square" style="color: #00bb84;"></i> </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/src/images/galeria.png" alt="Projeto 4">
+                    <div class="layer">
+                        <h3>Webpage</h3>
+                        <p>Galeria de fotos online</p>
+                        <a target="_blank" href="https://tss-galeria-fotos-jquery.vercel.app/"><i
+                                class="fa-solid fa-arrow-up-right-from-square" style="color: #00bb84;"></i> </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/src/images/loja-virtual.png" alt="Projeto 5">
+                    <div class="layer">
+                        <h3>Webpage</h3>
+                        <p>Site de uma loja vitual</p>
+                        <a target="_blank" href="https://loja-virtual-responsiva-five.vercel.app/"><i
+                                class="fa-solid fa-arrow-up-right-from-square" style="color: #00bb84;"></i> </a>
+                    </div>
+                </div>
+
+            </div>
+            <a href="#" class="btn">Veja mais</a>
+        </div>
+    </section>
+
+    <!-- ----------contato-------- -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact__left">
+                    <h1 class="sub__title">Fale Comigo</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>tomas_ss@aol.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>021 96769-1025</p>
+                    <div class="social__icons">
+                        <a target="_blank" href="https://www.linkedin.com/in/tomas-santana-s/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a target="_blank" href="https://github.com/54M07"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="/src/images/curriculo.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact__right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Seu Nome" required>
+                        <input type="email" name="email" placeholder="Seu Email" required>
+                        <textarea name="Message" rows="6" placeholder="Sua Mensagem"></textarea>
+                        <button type="submit" class="btn btn2">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer class="copyright">
+            <p> &copy; 2024 - Tomás Santana</p>
+        </footer>
+    </div>
+
+    <script src="/src/scripts/script.js"></script>
+</body>
+
+</html>

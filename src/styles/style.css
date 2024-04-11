@@ -534,3 +534,9 @@ form .btn2 {
         z-index: 1;
     }
 }
+
+#msg { 
+    color: #ababab;
+    margin-top: -40px;
+    display: block;
+}

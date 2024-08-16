@@ -1,4 +1,12 @@
-/* Reset e Estilos Globais */
+:root {
+    --primary-color: #00BB84;
+    --secondary-color: #02ba64;
+    --text-color: #ffffff;
+    --background-color: #000000;
+    --font-size-large: 60px;
+    --font-size-medium: 18px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,8 +21,8 @@ html {
 }
 
 body {
-    background-color: #000000;
-    color: #fff;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 /* Header */
@@ -47,8 +55,8 @@ body {
 }
 
 .nav__link {
-    color: #fff;
-    font-size: 18px;
+    color: var(--text-color);
+    font-size: var(--font-size-medium);
     position: relative;
 }
 
@@ -56,7 +64,7 @@ body {
     content: "";
     width: 0;
     height: 3px;
-    background: #00BB84;
+    background: var(--primary-color);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -74,9 +82,9 @@ body {
 }
 
 .header__subtitle {
-    font-size: 60px;
+    font-size: var(--font-size-large);
     font-weight: 600;
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 .text-revels {
@@ -94,7 +102,6 @@ body {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
         text-shadow: 3px 3px 5px rgba(1, 188, 82, 0.8);
@@ -102,17 +109,17 @@ body {
 }
 
 .header__title {
-    font-size: 60px;
+    font-size: var(--font-size-large);
     margin-top: 30px;
     margin-bottom: 20px;
 }
 
 .header__name {
-    color: #02ba64;
+    color: var(--secondary-color);
 }
 
 .header__description {
-    font-size: 18px;
+    font-size: var(--font-size-medium);
 }
 
 /* About Section */
@@ -142,9 +149,9 @@ body {
 }
 
 .about h2.sub__title {
-    font-size: 60px;
+    font-size: var(--font-size-large);
     font-weight: 600;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .tab__titles {
@@ -154,7 +161,7 @@ body {
 
 .tab__links {
     margin-right: 50px;
-    font-size: 18px;
+    font-size: var(--font-size-medium);
     font-weight: 500;
     cursor: pointer;
     position: relative;
@@ -164,7 +171,7 @@ body {
     content: "";
     width: 0;
     height: 3px;
-    background: #00BB84;
+    background: var(--primary-color);
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -180,7 +187,7 @@ body {
 }
 
 .tab__contents ul li span {
-    color: #02ba64;
+    color: var(--secondary-color);
     font-size: 20px;
 }
 
@@ -191,8 +198,7 @@ body {
 }
 
 .tab__contents ul li i:hover {
-    color: #00BB84;
-    ;
+    color: var(--primary-color);
     transform: translateY(-5px);
 }
 
@@ -210,7 +216,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 187, 132, .9);
-    color: #fff;
+    color: var(--text-color);
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
@@ -228,52 +234,6 @@ body {
 
 .tab__contents.active-tab {
     display: block;
-}
-
-
-
-/* Services Section */
-.services {
-    padding: 30px 0;
-}
-
-.services__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 15px;
-}
-
-.services__list .service {
-    background: #262626;
-    padding: 40px;
-    font-size: 16px;
-    font-weight: 300;
-    border-radius: 10px;
-    transition: background .5s, transform .5s;
-}
-
-.services__list .service i {
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-
-.services__list .service h3 {
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
-.services__list .service a {
-    color: #fff;
-    font-size: 16px;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-.services__list div:hover {
-    background: #1c4337;
-    transform: translateY(-10px);
 }
 
 /* Portfolio Section */
@@ -305,7 +265,7 @@ body {
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #00BB84);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), var(--primary-color));
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -328,10 +288,10 @@ body {
 
 .layer a {
     margin-top: 20px;
-    color: #00BB84;
+    color: var(--primary-color);
     font-size: 18px;
     line-height: 60px;
-    background: #fff;
+    background: var(--text-color);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -346,23 +306,60 @@ body {
     height: 100%;
 }
 
-.btn {
-    display: block;
+.btn .btn2 {
+    display: inline-block;
+}
+
+.btn.btn2 {
+    display: inline-block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #00BB84;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     padding: 14px 50px;
     border-radius: 6px;
-    color: #fff;
-    transition: background .5s;
+    color: var(--text-color);
+    transition: background 0.5s;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn:hover {
-    background: #00BB84;
+    background: #137c5c;
 }
 
-/* ----------contato----------- */
+.btn2 {
+    position: relative;
+}
 
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--text-color);
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.btn2.loading .spinner {
+    display: inline-block;
+}
+
+.btn2.loading .button-text {
+    visibility: hidden;
+}
+
+/* Contato */
 .contact__left {
     flex-basis: 35%;
 }
@@ -378,7 +375,7 @@ body {
 .contact__left p i {
     margin-right: 15px;
     font-size: 25px;
-    color: #00BB84;
+    color: var(--primary-color);
 }
 
 .social__icons {
@@ -394,13 +391,8 @@ body {
 }
 
 .social__icons a:hover {
-    color: #00BB84;
+    color: var(--primary-color);
     transform: translateY(-5px);
-}
-
-.btn.btn2 {
-    display: inline-block;
-    background: #00BB84;
 }
 
 .contact__right form {
@@ -415,14 +407,14 @@ form textarea {
     background: #262626;
     padding: 15px;
     margin: 15px 0;
-    color: #fff;
-    font-size: 18px;
+    color: var(--text-color);
+    font-size: var(--font-size-medium);
     border-radius: 6px;
 }
 
 form .btn2 {
     padding: 14px;
-    font-size: 18px;
+    font-size: var(--font-size-medium);
     margin-top: 20px;
     cursor: pointer;
 }
@@ -431,12 +423,12 @@ form .btn2 {
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    border: 1px solid #00BB84;
+    border: 1px solid var(--primary-color);
     font-weight: 300;
     margin-top: 20px;
 }
 
-/* ------Mobile----- */
+/* Mobile */
 
 .nav i {
     display: none;
@@ -444,7 +436,7 @@ form .btn2 {
 
 @media only screen and (max-width: 600px) {
     #header {
-        background: #000000;
+        background: var(--background-color);
     }
 
     .fa-solid.fa-bars::before {
@@ -461,7 +453,7 @@ form .btn2 {
 
     .nav__list {
         background: rgba(0, 187, 132, .9);
-        color: #fff;
+        color: var(--text-color);
         position: fixed;
         top: 0;
         right: -200px;

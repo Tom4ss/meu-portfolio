@@ -1,18 +1,4 @@
-{
-    "builds": [
-      {
-        "src": "src/**/*.html",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "src/**/*.js",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "src/**/*.css",
-        "use": "@vercel/static"
-      }
-    ],
-    "outputDirectory": "dist"
+  {
+      "outputDirectory": "dist"
   }
   

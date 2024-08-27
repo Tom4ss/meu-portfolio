@@ -13,19 +13,19 @@ export const minifyHTML = () => {
 export const minifyCSS = () => {
   return gulp.src('src/styles/*.css')
     .pipe(cssnano())
-    .pipe(gulp.dest('dist/css'));
+    .pipe(gulp.dest('dist/src/styles/css'));
 };
 
 export const optimizeImages = () => {
   return gulp.src('src/images/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('dist/src/images'));
 };
 
 export const minifyJS = () => {
   return gulp.src('src/scripts/*.js')
     .pipe(terser())
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('dist/src/scripts.js'));
 };
 
 export default gulp.series(minifyCSS, optimizeImages, minifyJS, minifyHTML);

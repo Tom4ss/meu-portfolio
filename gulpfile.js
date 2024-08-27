@@ -5,7 +5,7 @@ import terser from 'gulp-terser';
 import htmlmin from 'gulp-htmlmin';
 
 export const minifyHTML = () => {
-    return gulp.src('src/*.html')
+    return gulp.src('*.html')
       .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
       .pipe(gulp.dest('dist'));
   };

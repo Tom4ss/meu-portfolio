@@ -21,11 +21,6 @@ export const minifyJS = () => {
     .pipe(gulp.dest('dist/src/scripts'));
 };
 
-export const copyImages = () => {
-  return gulp.src('src/images/*')
-    .pipe(gulp.dest('dist/src/images'));
-};
-
 export default gulp.series(
-  gulp.parallel(minifyHTML, minifyCSS, minifyJS, copyImages)
+  gulp.parallel(minifyHTML, minifyCSS, minifyJS)
 );

@@ -30,7 +30,7 @@ body {
 .header {
     width: 100%;
     height: 100vh;
-    background-image: url(/src/images/hero.png);
+    background-image: url(https://servidor-estaticos-azure.vercel.app/hero.png);
     background-size: cover;
     background-position: center;
 }

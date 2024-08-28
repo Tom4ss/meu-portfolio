@@ -13,7 +13,7 @@ export const minifyHTML = () => {
 export const minifyCSS = () => {
   return gulp.src('src/styles/*.css')
     .pipe(cssnano())
-    .pipe(gulp.dest('dist/src/styles/css'));
+    .pipe(gulp.dest('dist/src/styles'));
 };
 
 export const optimizeImages = () => {
@@ -25,7 +25,7 @@ export const optimizeImages = () => {
 export const minifyJS = () => {
   return gulp.src('src/scripts/*.js')
     .pipe(terser())
-    .pipe(gulp.dest('dist/src/scripts/js'));
+    .pipe(gulp.dest('dist/src/scripts'));
 };
 
 export default gulp.series(minifyCSS, optimizeImages, minifyJS, minifyHTML);

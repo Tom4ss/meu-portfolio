@@ -1,6 +1,5 @@
 import gulp from 'gulp';
 import cssnano from 'gulp-cssnano';
-import imagemin from 'gulp-imagemin';
 import terser from 'gulp-terser';
 import htmlmin from 'gulp-htmlmin';
 
@@ -16,16 +15,10 @@ export const minifyCSS = () => {
     .pipe(gulp.dest('dist/src/styles'));
 };
 
-export const optimizeImages = () => {
-  return gulp.src('src/images/*')
-    .pipe(imagemin())
-    .pipe(gulp.dest('dist/src/images'));
-};
-
 export const minifyJS = () => {
   return gulp.src('src/scripts/*.js')
     .pipe(terser())
     .pipe(gulp.dest('dist/src/scripts'));
 };
 
-export default gulp.series(minifyCSS, optimizeImages, minifyJS, minifyHTML);
+export default gulp.series(minifyCSS, minifyJS, minifyHTML);

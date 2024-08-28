@@ -25,7 +25,7 @@ export const optimizeImages = () => {
 export const minifyJS = () => {
   return gulp.src('src/scripts/*.js')
     .pipe(terser())
-    .pipe(gulp.dest('dist/src/scripts.js'));
+    .pipe(gulp.dest('dist/src/scripts/js'));
 };
 
 export default gulp.series(minifyCSS, optimizeImages, minifyJS, minifyHTML);

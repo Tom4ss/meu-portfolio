@@ -18,6 +18,30 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   cards.forEach((card) => observer.observe(card));
+
+  const themeToggle = document.getElementById("theme-toggle");
+  const body = document.body;
+
+  // Carregar o tema salvo no localStorage
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light") {
+      body.classList.add("light-theme");
+      themeToggle.classList.replace("fa-moon", "fa-sun");
+  }
+
+  // Alternar tema ao clicar no botão
+  themeToggle.addEventListener("click", () => {
+      body.classList.toggle("light-theme");
+
+      // Alterar ícone do botão e salvar preferência no localStorage
+      if (body.classList.contains("light-theme")) {
+          themeToggle.classList.replace("fa-moon", "fa-sun");
+          localStorage.setItem("theme", "light");
+      } else {
+          themeToggle.classList.replace("fa-sun", "fa-moon");
+          localStorage.setItem("theme", "dark");
+      }
+  });
 });
 
 let tablinks = document.getElementsByClassName("tab__links");

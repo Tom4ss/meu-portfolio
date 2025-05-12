@@ -1,10 +1,39 @@
+/* Tema claro (padrão) */
 :root {
     --primary-color: #00BB84;
     --secondary-color: #02ba64;
+    --card-color: #2c574a8c;
     --text-color: #ffffff;
     --background-color: #000000;
     --font-size-large: 60px;
     --font-size-medium: 18px;
+}
+
+/* Tema claro */
+.light-theme {
+    --primary-color: #00796b;
+    --card-color: #e0f2f1;
+    --secondary-color: #004d40;
+    --text-color: #212121;
+    --background-color: #ffffff;
+   
+}
+
+/* Estilo do botão de alternância */
+#theme-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: color 0.3s;
+    display: block;
+}
+
+#theme-toggle:hover {
+    color: var(--primary-color);
 }
 
 * {
@@ -30,7 +59,7 @@ body {
 .header {
     width: 100%;
     height: 100vh;
-    background-image: url(https://servidor-estaticos-azure.vercel.app/hero.png);
+    background-image:   url(../images/hero-.png);
     background-size: cover;
     background-position: center;
 }
@@ -52,6 +81,25 @@ body {
 .nav__list li {
     display: inline-block;
     margin: 10px 20px;
+}
+
+.nav__list li a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color);
+    font-size: var(--font-size-medium);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav__list li a i {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.nav__list li a:hover {
+    color: var(--primary-color);
 }
 
 .nav__link {
@@ -104,7 +152,7 @@ body {
     }
     to {
         opacity: 1;
-        text-shadow: 3px 3px 5px rgba(1, 188, 82, 0.8);
+        text-shadow: 3px 3px 5px var(--primary-color);
     }
 }
 
@@ -129,7 +177,7 @@ p {
 
 .about {
     padding: 80px 0;
-    color: #ababab;
+    color: var(--text-color);
 }
 
 .row {
@@ -261,7 +309,7 @@ p {
     justify-content: space-between;
     width: 80%;
     height: 80vh;
-    background: #1e1e1e;
+    background: var(--card-color);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -435,7 +483,7 @@ p {
     font-size: 30px;
     margin-right: 15px;
     display: inline-block;
-    color: #ababab;
+    color: var(--text-color);
     transition: transform .5s;
 }
 
@@ -453,7 +501,7 @@ form textarea {
     width: 100%;
     border: 0;
     outline: none;
-    background: #262626;
+    background: var(--card-color);
     padding: 15px;
     margin: 15px 0;
     color: var(--text-color);

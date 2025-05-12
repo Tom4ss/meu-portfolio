@@ -25,10 +25,30 @@
             alt="Logo"
           />
           <ul id="sidemenu" class="nav__list" aria-label="Menu de navegação">
-            <li><a class="nav__link" href="#header">Home</a></li>
-            <li><a class="nav__link" href="#about">Sobre</a></li>
-            <li><a class="nav__link" href="#portfolio">Portfolio</a></li>
-            <li><a class="nav__link" href="#contact">Contato</a></li>
+            <li>
+              <a class="nav__link" href="#header">
+                <i class="fa-solid fa-house" aria-hidden="true"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="#about">
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
+                <span>Sobre</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="#portfolio">
+                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                <span>Portfolio</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="#contact">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <span>Contato</span>
+              </a>
+            </li>
             <i
               class="fa-regular fa-circle-xmark"
               onclick="closemenu()"
@@ -39,6 +59,11 @@
             class="fa-solid fa-bars"
             onclick="openmenu()"
             aria-label="Abrir Menu"
+          ></i>
+          <i
+            id="theme-toggle"
+            class="fa-solid fa-sun"
+            aria-label="Alternar Tema"
           ></i>
         </nav>
         <div class="header__text">
@@ -73,22 +98,25 @@
             <div class="about__col-2">
               <h2 id="contact-mobile" class="sub__title">Sobre Mim</h2>
               <p>
-                Sou estudante de Engenharia Front-End na EBAC e também graduando
-                em Sistemas de Informação pelo Centro Universitário União das
-                Américas Descomplica. Possuo habilidades em HTML, CSS, SASS,
-                JavaScript, TypeScript e Git. Tenho conhecimento em tecnologias
-                como REST e AJAX, o que me permite integrar serviços web de
-                maneira eficiente, utilizando a abordagem assíncrona do AJAX
-                para melhorar a interatividade e integrando APIs RESTful para
-                uma comunicação eficaz entre sistemas. Tenho conhecimento em
-                frameworks como Angular, Vue.js e React, além de utilizar
-                ferramentas de teste como Jest e Cypress, garantindo a qualidade
-                do código. Minha adaptabilidade e paixão pelo desenvolvimento
-                web me capacitam a abordar desafios de codificação de maneira
-                eficaz. Estou em busca de oportunidades para aplicar meu
-                conhecimento e crescer na área, contribuindo para projetos
-                desafiadores que impulsionem minha evolução como Engenheiro
-                Front-End.
+                Sou um profissional com expertise em duas frentes:
+                Desenvolvimento Front-End e Infraestrutura de TI. Na área de
+                Front-End, dedico-me a criar interfaces web modernas e
+                responsivas, utilizando tecnologias como HTML5, CSS3, SASS e
+                JavaScript, além de frameworks como React e Vue.js.
+                Minha paixão é transformar designs em experiências interativas e
+                acessíveis, integrando APIs REST e otimizando processos com
+                ferramentas como Gulp e Grunt para garantir alta performance e
+                usabilidade. Paralelamente, atuo em Infraestrutura de TI,
+                gerenciando redes LAN/WAN, administrando servidores e oferecendo
+                suporte técnico especializado. Meu foco aqui é garantir
+                segurança, estabilidade e eficiência operacional, implementando
+                soluções preventivas contra vulnerabilidades e protegendo dados
+                críticos. Combinar essas duas áreas me permite enxergar projetos
+                de forma holística, unindo interfaces intuitivas a sistemas
+                robustos e seguros. Sou movido por desafios que exigem
+                criatividade técnica e visão estratégica, sempre buscando
+                entregar soluções que equilibrem inovação, qualidade e
+                necessidades reais dos usuários e negócios.
               </p>
 
               <div class="tab__titles">
